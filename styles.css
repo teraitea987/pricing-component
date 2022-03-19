@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+	--main_color: #2196F3;
+	--second-color:  hsl(233, 13%, 49%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat";
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--main_color);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: var(--main_color);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+  /* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* DEBUT DU CSS */
+.section {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pricing-container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	height: 20vh;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+}
+
+.pricing-container h1 {
+	color: var(--main_color);
+	padding-bottom: 20px;
+	font-weight: 800;
+}
+
+.ctas-btn {
+	display: flex;
+	align-items: center;
+}
+
+.ctas-btn p {
+	color: var(--main_color);
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* CARDS */
+.card {
+	display: flex;
+	width: 400px;
+	justify-content: center;
+	flex-direction: column;
+	padding: 38px 38px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.card {
+	/* the other rules */
+	transition: height 0.3s, box-shadow 0.3s;
+  }
+.card:hover {
+	zoom: 120%;
+	background-image: linear-gradient(
+		5deg,
+		hsl(271deg 88% 62%) 3%,
+		hsl(268deg 86% 69%) 62%,
+		hsl(267deg 85% 75%) 77%,
+		hsl(266deg 85% 80%) 86%,
+		hsl(265deg 84% 84%) 92%,
+		hsl(264deg 84% 87%) 96%,
+		hsl(264deg 83% 91%) 98%,
+		hsl(263deg 83% 94%) 100%,
+		hsl(263deg 82% 97%) 100%,
+		hsl(0deg 0% 100%) 100%
+	  );
+}
+
+.cards-container {
+	display: flex;
+}
+
+.card-title p {
+	font-weight: 700;
+	color: var(--second-color);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.card-price p{
+	font-weight: 700;
+	color: var(--second-color);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 72px;
+	text-align: center;
+}
+
+.card-data p {
+	font-weight: 700;
+	color: var(--second-color);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	letter-spacing: 1px;
+	border-top: 1px solid var(--second-color);
+}
+
+.card-data p:last-child {
+	border-bottom: 1px solid var(--second-color);
+	margin-bottom: 20px;
+}
+
+.cta {
+	width: 100%;
+	background-image: linear-gradient(
+		5deg,
+		hsl(271deg 88% 62%) 3%,
+		hsl(268deg 86% 69%) 62%,
+		hsl(267deg 85% 75%) 77%,
+		hsl(266deg 85% 80%) 86%,
+		hsl(265deg 84% 84%) 92%,
+		hsl(264deg 84% 87%) 96%,
+		hsl(264deg 83% 91%) 98%,
+		hsl(263deg 83% 94%) 100%,
+		hsl(263deg 82% 97%) 100%,
+		hsl(0deg 0% 100%) 100%
+	  );
+	color: white;
+	border: none;
+	padding: 10px 10px;
+	margin-bottom: 20px;
+}
+
